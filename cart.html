@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tech2etc Ecommerce Tutorial</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+        integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <section id="header">
+        <a href="#"><img src="img/logo.png" class="logo" alt=""></a>
+
+        <div>
+            <ul id="navbar">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="shop.html">Shop</a></li>
+                <li><a href="blog.html">Blog</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li id="lg-bag"><a class="active" href="cart.html"><i class="fa-solid fa-bag-shopping"></i></a></li>
+                <a href="#" id="close"><i class="far fa-times"></i> </a>
+            </ul>
+        </div>
+
+        <div id="mobile">
+            <a href="cart.html"><i class="far fa-shopping-bag"></i></a>
+            <i id="bar" class="fa fa-outdent"></i>
+        </div>
+    </section>
+
+    <section id="page-header" class="about-header">
+
+        <h2>#let's_talk</h2>
+
+        <p>LEAVE A MESSAGE , WE love to hear from you!</p>
+    </section>
+
+    <section id="cart" class="section-p1">
+        <table width="100%">
+            <thead>
+                <tr>
+                    <td>Remove</td>
+                    <td>Image</td>
+                    <td>Product</td>
+                    <td>Price</td>
+                    <td>Quantity</td>
+                    <td>Subtotal</td>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><a href="#"><i class="far fa-times-circle"></i></a></td>
+                    <td><img src="img/products/f1.jpg" alt=""></td>
+                    <td>Cartoon Astronaut T-Shirts</td>
+                    <td>$118.19</td>
+                    <td><input type="number" value="1" id="quantity-1" min="0" onchange="updateSubtotal(1)"></td>
+                    <td id="subtotal-1">$118.19</td>
+                </tr>
+                <tr>
+                    <td><a href="#"><i class="far fa-times-circle"></i></a></td>
+                    <td><img src="img/products/f2.jpg" alt=""></td>
+                    <td>Cartoon Astronaut T-Shirts</td>
+                    <td>$118.19</td>
+                    <td><input type="number" value="1" id="quantity-2" min="0" onchange="updateSubtotal(2)"></td>
+                    <td id="subtotal-2">$118.19</td>
+                </tr>
+                <tr>
+                    <td><a href="#"><i class="far fa-times-circle"></i></a></td>
+                    <td><img src="img/products/f3.jpg" alt=""></td>
+                    <td>Cartoon Astronaut T-Shirts</td>
+                    <td>$118.19</td>
+                    <td><input type="number" value="1" id="quantity-3" min="0" onchange="updateSubtotal(3)"></td>
+                    <td id="subtotal-3">$118.19</td>
+                </tr>
+            </tbody>
+        </table>
+    </section>
+
+    <section id="cart-add" class="section-p1">
+        <div id="coupon">
+            <h3>Apply Coupon</h3>
+            <div>
+                <input type="text" placeholder="Enter Your Coupon" id="coupon-input">
+                <button class="normal" onclick="applyCoupon()">Apply</button>
+            </div>
+        </div>
+        <div id="subtotal">
+            <h3>Cart Totals</h3>
+            <table>
+                <tr>
+                    <td>Cart Subtotal</td>
+                    <td id="cart-subtotal">$ 354.57</td>
+                </tr>
+                <tr>
+                    <td>Shipping</td>
+                    <td>Free</td>
+                </tr>
+                <tr>
+                    <td><strong>Total</strong></td>
+                    <td id="cart-total"><strong>$ 354.57</strong></td>
+                </tr>
+            </table>
+            <button class="normal">Proceed to checkout</button>
+        </div>
+    </section>
+
+    <footer class="section-p1">
+        <div class="col">
+            <img class="logo" src="img/logo.png" alt="">
+            <h4>Contact</h4>
+            <p><strong>Address: </strong> 562 Wellington Road, Street 32, San Francisco</p>
+            <p><strong>Phone:</strong> +01 2222 365 / (+91) 81 2345 6789</p>
+            <p><strong>Hours:</strong> 10:00 - 18:00, Mon - Sat</p>
+            <div class="follow">
+                <h4>Follow us</h4>
+                <div class="icon">
+                    <i class="fab fa-facebook-f"></i>
+                    <i class="fab fa-twitter"></i>
+                    <i class="fa fa-instagram"></i>
+                    <i class="fab fa-pinterest-p"></i>
+                    <i class="fab fa-youtube"></i>
+                </div>
+            </div>
+        </div>
+
+        <div class="col">
+            <h4>About</h4>
+            <a href="#">About us</a>
+            <a href="#">Delivery Information</a>
+            <a href="#">Privacy Policy</a>
+            <a href="#">Terms & Conditions</a>
+            <a href="#">Contact Us</a>
+        </div>
+
+        <div class="col">
+            <h4>My Account</h4>
+            <a href="#">Sign In</a>
+            <a href="#">View Cart</a>
+            <a href="#">My Wishlist</a>
+            <a href="#">Track My Order</a>
+            <a href="#">Help</a>
+        </div>
+
+        <div class="col install">
+            <h4>Install App</h4>
+            <p>From App Store or Google Play</p>
+            <div class="row">
+                <img src="img/pay/app.jpg" alt="">
+                <img src="img/pay/play.jpg" alt="">
+            </div>
+            <p>Secured Payment Gateways </p>
+            <img src="img/pay/pay.png" alt="">
+        </div>
+
+        <div class="copyright">
+            <p>0 2021, Tech2 etc - HTML CSS Ecommerce Template</p>
+        </div>
+    </footer>
+
+
+    <script>
+        function updateSubtotal(productNumber) {
+            const quantityInput = document.getElementById(`quantity-${productNumber}`);
+            const subtotalElement = document.getElementById(`subtotal-${productNumber}`);
+            const cartTotalElement = document.getElementById('cart-total');
+            const cartSubtotalElements = document.querySelectorAll('[id^="subtotal-"]');
+
+            // Get the price per item from the HTML (assuming it's constant)
+            const pricePerItem = 118.19; // Replace this with the actual price per item
+
+            // Calculate the subtotal for the current product based on the quantity
+            const quantity = parseInt(quantityInput.value, 10);
+            const subtotal = pricePerItem * quantity;
+
+            // Update the subtotal for the current product
+            subtotalElement.textContent = `$${subtotal.toFixed(2)}`;
+
+            // Calculate the cart subtotal
+            let cartSubtotal = 0;
+            cartSubtotalElements.forEach((element) => {
+                const subtotalValue = parseFloat(element.textContent.replace('$', ''));
+                cartSubtotal += subtotalValue;
+            });
+
+            // Update the cart subtotal
+            const cartSubtotalElement = document.getElementById('cart-subtotal');
+            cartSubtotalElement.innerHTML = `$ ${cartSubtotal.toFixed(2)}`;
+
+            // Update the cart total
+            const cartTotal = cartSubtotal; // Since there is no additional shipping cost
+            cartTotalElement.innerHTML = `<strong>$ ${cartTotal.toFixed(2)}</strong>`;
+        }
+
+        // Call updateSubtotal for each product row when the page loads
+        window.onload = function () {
+            const productRows = document.querySelectorAll('tbody tr');
+            productRows.forEach((row, index) => {
+                updateSubtotal(index + 1);
+                const quantityInput = row.querySelector('input[type="number"]');
+                quantityInput.addEventListener('change', () => updateSubtotal(index + 1));
+            });
+        };
+
+
+        function applyCoupon() {
+            const couponInput = document.getElementById('coupon-input');
+            const couponCode = couponInput.value.trim().toUpperCase();
+
+            // Check if the coupon code is "PARVGUPTA"
+            if (couponCode === 'PARVGUPTA') {
+                const cartSubtotalElement = document.getElementById('cart-subtotal');
+                const cartTotalElement = document.getElementById('cart-total');
+
+                // Get the current cart subtotal and total
+                let cartSubtotal = parseFloat(cartSubtotalElement.textContent.replace('$', ''));
+                let cartTotal = parseFloat(cartTotalElement.textContent.replace('$', ''));
+
+                // Subtract $10 from both the cart subtotal and total
+                cartSubtotal -= 10;
+                cartTotal -= 10;
+
+                // Update the cart subtotal and total in the DOM
+                cartSubtotalElement.textContent = `$ ${cartSubtotal.toFixed(2)}`;
+                cartTotalElement.innerHTML = `<strong>$ ${cartTotal.toFixed(2)}</strong>`;
+
+                // Clear the coupon input field
+                couponInput.value = '';
+            }
+        }
+    </script>
+
+
+
+
+    <script src="script.js"></script>
+</body>
+
+</html>
